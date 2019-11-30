@@ -1,0 +1,199 @@
+@import 'fonts';
+@import 'normalize';
+
+$logo-font: 'Glitter Antique';
+$body-font-size: 16px;
+$pink: #F1B8B6;
+$green: #367D45;
+$purple: #B1B6E2;
+$cyan: #8FE8E8;
+
+@mixin logo {
+    font-family: 'Glitter Antique';
+    font-weight: 600;
+}
+
+@mixin body-font {
+    font-family: 'Glitter Regular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: $body-font-size;
+    color: #000;
+    line-height: 1.2;
+}
+
+body {
+    @include body-font();
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.full { padding: 0;}
+
+section, header {
+    padding: 2vw 4vw;
+    position: sticky;
+    position: -webkit-sticky;
+    top: -1px;
+}
+
+header {
+    background-color: #fff;
+
+    h1 {
+        font-family: $logo-font;
+        font-size: $body-font-size * 1.5;
+        color: #000;
+    }
+}
+
+section {
+    background-color: $pink;
+    height: 100vh;
+    border-top: 1px solid #000;
+   
+    h2, h3, p, a {    
+        @include body-font();
+        font-size: $body-font-size * 1.5;
+        line-height: 1.2;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:hover {
+        // border-top: 1px solid #000;
+        // border-bottom: 1px solid #000;
+        // padding: 3px 0 2px 0;
+        opacity: 0.5;
+    }
+    p {
+        max-width: 60vw;
+    }
+}
+
+section.editorial, section.about {
+    background-color: #000;
+    color: #fff;
+    max-height: 4vw;
+    transition: max-height 0.5s ease;
+
+    h2, h3 {
+        cursor: pointer;
+        color: #fff;
+    }
+    p {
+        color: #fff;
+    }
+    .copy {
+        display: none;
+    }
+    div.show {
+        display: block;
+    }
+}
+
+section.expand {
+    top: auto;
+    height: 100%;
+    max-height: 300vh;
+}
+
+section.third-issue, 
+section.second-issue,
+section.first-issue {
+
+    div.content-wrapper {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        // height: 90%;
+
+        div.headline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        div.image-wrapper {
+            max-width: 100%;
+            max-height: 100%;
+    
+            img {
+                width: 100%;
+                height: auto;
+                object-position: bottom;
+                // transform-origin: center;
+            }
+        }
+        div.mit-texten-von {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            img {
+                max-width: 70%;
+                text-align: right;
+            }
+        }
+    }
+}
+
+section.with-text-from {
+    background-color: $green;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row;
+
+    div.autorinnen {
+        width: 50%;
+
+        h2 {
+            padding: 2vw 4vw 0 4vw;
+        }
+        ul {
+            padding: 0 4vw;
+        }
+        li {
+            list-style: none;
+        }
+        li::before {
+            content: '\2192';
+            margin-right: 20px;
+        }
+    }
+
+    div.third-issue-mockup {
+        width: 50%;
+        /* background-image: image-set("assets/third-issue-mockup.jpg" 1x, 
+                                    "assets/third-issue-mockup-2x.jpg" 2x); */
+        background-image: url(assets/third-issue-mockup-2x.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
+      }
+}
+
+section.contact {
+    display: grid;
+    grid-template-columns: 33.333%;
+    grid-template-rows: auto;
+    grid-template-areas: 'first-column second-column .';
+
+    div.contact-us {
+        grid-area: first-column;
+    }
+      
+    div.distribution {
+        grid-area: second-column;
+    }
+    
+    p{
+        padding: 2vw 0 0 0;
+        margin: 0;
+    }
+}
+
+
+
