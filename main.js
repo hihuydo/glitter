@@ -21,7 +21,7 @@ const aboutCopyTag = document.querySelector('section.about div.copy')
 
 aboutTag.addEventListener('click', function () {
     if (aboutSection.classList.contains('expand')) {
-        aboutTag.innerHTML = 'Über Glitter'
+        aboutTag.innerHTML = '&Uuml;ber Glitter'
         aboutSection.classList.remove('expand')
         aboutCopyTag.classList.remove('show')
     } else {
