@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Glitter Italic';
+    src: url('../fonts/Glitter-Italic.woff2') format('woff2'),
+        url('../fonts/Glitter-Italic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Glitter Serif';
+    src: url('../fonts/Glitter-Serif.woff2') format('woff2'),
+        url('../fonts/Glitter-Serif.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Glitter Serif Medium';
+    src: url('../fonts/Glitter-Serif-Medium.woff2') format('woff2'),
+        url('../fonts/Glitter-Serif-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Glitter Regular';
+    src: url('../fonts/Glitter-Regular.woff2') format('woff2'),
+        url('../fonts/Glitter-Regular.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+h2 {
+    font-family: $font-serif;
+    font-size: 1.6rem;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: 5vh;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+}

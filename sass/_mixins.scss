@@ -1,0 +1,43 @@
+@mixin content-btn {
+    text-align: center;
+    height: 100%;
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+
+    &:link,
+    &:visited {
+        background-color: inherit;
+        color: $color-black;
+    }
+
+    &:hover {
+        background-color: $color-black;
+        color: $color-white;
+    }
+}
+
+@mixin arrow-up-right {
+    &::before {
+        content: '\2197';
+        padding-right: 1rem;
+    }
+}
+
+@mixin arrow-right {
+    &::before {
+        content: '\261E';
+        padding-right: 1rem;
+    }
+}
+
+@mixin sad-face {
+    &::before {
+        content: '\2639';
+        padding-right: 1rem;
+    }
+}
