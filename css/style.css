@@ -1,0 +1,369 @@
+@charset "UTF-8";
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+html {
+  font-size: 62.5%;
+  /* would be 16pixel by default if the user doesn't change anything */
+  scroll-snap-type: y mandatory;
+  scroll-padding: 8vh;
+  scroll-snap-type: mandatory; }
+
+body {
+  box-sizing: border-box;
+  font-family: "Glitter Serif";
+  font-size: 1.6rem;
+  padding-top: 8vh;
+  overflow-x: hidden; }
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 12px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(241, 184, 182, 0.3);
+  background-color: #000; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  -webkit-box-shadow: inset 0 0 6px rgba(241, 184, 182, 0.2); }
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255, 255, 255, 0.4); }
+
+/* iPhone 5 – Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-padding: 10vh;
+    scroll-snap-type: mandatory; }
+  body {
+    padding-top: 10vh; } }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+@font-face {
+  font-family: 'Glitter Italic';
+  src: url("../fonts/Glitter-Italic.woff2") format("woff2"), url("../fonts/Glitter-Italic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Glitter Serif';
+  src: url("../fonts/Glitter-Serif.woff2") format("woff2"), url("../fonts/Glitter-Serif.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Glitter Serif Medium';
+  src: url("../fonts/Glitter-Serif-Medium.woff2") format("woff2"), url("../fonts/Glitter-Serif-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Glitter Regular';
+  src: url("../fonts/Glitter-Regular.woff2") format("woff2"), url("../fonts/Glitter-Regular.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+h2 {
+  font-family: "Glitter Serif";
+  font-size: 1.6rem;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  height: 5vh; }
+  h2::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%; }
+
+.page-wrapper {
+  padding: 2vw 4vw; }
+
+.sold-out::before {
+  content: '\2639';
+  padding-right: 1rem; }
+
+.header {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; }
+  .header__logo {
+    color: #fff;
+    font-size: 1.6rem; }
+  .header__info:link, .header__info:visited {
+    color: #fff;
+    font-size: 1.6rem;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: .5rem 1rem; }
+    .header__info:link::before, .header__info:visited::before {
+      content: '\261E';
+      padding-right: 1rem; }
+  .header__info:hover {
+    color: #000;
+    background-color: #fff; }
+
+/* iPhone 5 – Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  h1.header__logo {
+    max-width: 30vh; }
+  .header {
+    height: 10vh; }
+    .header__logo {
+      font-size: 1.2rem; }
+    .header__info:link, .header__info:visited {
+      font-size: 1.2rem;
+      padding: .2rem .5rem; } }
+
+/* iPhone 5 – Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  h1.header__logo {
+    max-width: 100vh; } }
+
+.info-open {
+  width: 100%;
+  height: 92vh;
+  margin-top: 8vh;
+  background-color: #000;
+  border-top: 1px solid #fff;
+  font-family: "Glitter Regular";
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1.3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  transform: translateX(100%);
+  transition: transform .5s ease; }
+  .info-open__copy {
+    width: 60%;
+    padding: 4vw 2vw 2vw 4vw;
+    font-size: 2.4rem;
+    overflow: auto; }
+  .info-open__vertical-linie {
+    width: 1px;
+    background-color: #fff;
+    height: 100vh;
+    padding: 0; }
+  .info-open__contact {
+    width: 30%;
+    padding: 4vw 2vw 2vw 1vw;
+    font-size: 1.6rem; }
+    .info-open__contact a:hover {
+      border-bottom: 1px solid #fff;
+      padding-bottom: 3px; }
+  .info-open p {
+    margin-top: 2rem; }
+
+/* iPhone 5 – Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .info-open {
+    display: block;
+    overflow: auto;
+    margin-top: 10vh; }
+    .info-open__copy {
+      width: 100%;
+      font-size: 1.6rem; }
+    .info-open__vertical-linie {
+      display: hidden;
+      height: 0; }
+    .info-open__contact {
+      width: 100%;
+      padding: 4vw 2vw 4vw 4vw; }
+      .info-open__contact p:last-child {
+        padding-bottom: 4rem; } }
+
+.close {
+  transform: translateX(0); }
+
+.issue-block {
+  height: 92vh;
+  position: relative;
+  scroll-snap-align: start; }
+  .issue-block__image {
+    height: 77vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #000; }
+  .issue-block__editorial {
+    padding: 4vw 4vw;
+    column-count: 2;
+    column-gap: 5rem;
+    font-family: "Glitter Serif Medium"; }
+    .issue-block__editorial p {
+      margin-bottom: 2rem;
+      line-height: 1.5; }
+  .issue-block__names {
+    padding: 4vw 4vw;
+    text-align: center; }
+    .issue-block__names p {
+      max-width: 70vh;
+      margin: 0 auto;
+      font-size: 2.4rem; }
+
+.third-image {
+  background-image: url(../assets/third-issue-2x.jpg); }
+
+.second-image {
+  background-image: url(../assets/second-issue-2x.jpg); }
+
+.first-image {
+  background-image: url(../assets/first-issue-2x.jpg); }
+
+/* iPad Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .third-image {
+    background-image: url(../assets/third-issue-2x-tablet.jpg); }
+  .second-image {
+    background-image: url(../assets/second-issue-2x-tablet.jpg); }
+  .first-image {
+    background-image: url(../assets/first-issue-2x-tablet.jpg); } }
+
+/* iPhone 5 – Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .issue-block {
+    height: 90vh;
+    scroll-snap-align: start; }
+    .issue-block__image {
+      height: 66vh; }
+    .issue-block__editorial {
+      padding: 4vw 4vw;
+      column-count: auto; }
+    .issue-block__names {
+      padding: 4vw; }
+      .issue-block__names p {
+        font-size: 1.6rem; }
+  .third-image {
+    background-image: url(../assets/third-issue-2x-tablet.jpg); }
+  .second-image {
+    background-image: url(../assets/second-issue-2x-tablet.jpg); }
+  .first-image {
+    background-image: url(../assets/first-issue-2x-tablet.jpg); }
+  .btn-block {
+    height: 8vh; } }
+
+/* iPhone 5 – Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .third-image {
+    background-image: url(../assets/third-issue-2x-landscape.jpg); }
+  .second-image {
+    background-image: url(../assets/second-issue-2x-landscape.jpg); }
+  .first-image {
+    background-image: url(../assets/first-issue-2x-landscape.jpg); } }
+
+.btn-block {
+  width: 100%;
+  height: 5vh;
+  border-bottom: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .btn-block__left {
+    width: 50%;
+    border-right: 1px solid #000;
+    text-align: center;
+    height: 100%; }
+    .btn-block__left::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%; }
+    .btn-block__left:link, .btn-block__left:visited {
+      background-color: inherit;
+      color: #000; }
+    .btn-block__left:hover {
+      background-color: #000;
+      color: #fff; }
+    .btn-block__left:active {
+      background-color: inherit;
+      color: #000; }
+    .btn-block__left::before {
+      content: '\261E';
+      padding-right: 1rem; }
+  .btn-block__right {
+    width: 50%;
+    text-align: center;
+    height: 100%; }
+    .btn-block__right::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%; }
+    .btn-block__right:link, .btn-block__right:visited {
+      background-color: inherit;
+      color: #000; }
+    .btn-block__right:hover {
+      background-color: #000;
+      color: #fff; }
+    .btn-block__right:active {
+      background-color: inherit;
+      color: #000; }
+    .btn-block__right::before {
+      content: '\261E';
+      padding-right: 1rem; }
+
+/* iPhone 5 – Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .btn-block {
+    height: 8vh; } }
+
+.third-background {
+  background-color: #F1B8B6; }
+
+.second-background {
+  background-color: #B1B6E2; }
+
+.first-background {
+  background-color: #8FE8E8; }
+
+.overlay {
+  width: 100%;
+  height: 77vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  transform: translateX(-100%);
+  transition: transform .5s ease;
+  border-bottom: 1px solid #000; }
+  .overlay__third {
+    background-color: #F1B8B6; }
+  .overlay__second {
+    background-color: #B1B6E2; }
+  .overlay__first {
+    background-color: #8FE8E8; }
+
+/* iPhone 5 – Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .overlay {
+    height: 66vh; } }
+
+.open {
+  transform: translateX(0); }
