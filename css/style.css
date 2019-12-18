@@ -214,9 +214,18 @@ h2 {
     border-bottom: 1px solid #000; }
   .issue-block__editorial {
     padding: 4vw 4vw;
+    font-family: "Glitter Serif Medium";
     column-count: 2;
     column-gap: 5rem;
-    font-family: "Glitter Serif Medium"; }
+    -webkit-column-rule-width: 1px;
+    -moz-column-rule-width: 1px;
+    column-rule-width: 1px;
+    -webkit-column-rule-style: solid;
+    -moz-column-rule-style: solid;
+    column-rule-style: solid;
+    -webkit-column-rule-color: black;
+    -moz-column-rule-color: black;
+    column-rule-color: black; }
     .issue-block__editorial p {
       margin-bottom: 2rem;
       line-height: 1.5; }
