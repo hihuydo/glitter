@@ -201,7 +201,14 @@ h2 {
     font-family: "Glitter Serif Medium"; }
     .issue-block__editorial p {
       margin-bottom: 2rem;
-      line-height: 1.3; }
+      line-height: 1.5; }
+  .issue-block__names {
+    padding: 4vw 4vw;
+    text-align: center; }
+    .issue-block__names p {
+      max-width: 70vh;
+      margin: 0 auto;
+      font-size: 2.4rem; }
 
 .third-image {
   background-image: url(../assets/third-issue-2x.jpg); }
@@ -230,7 +237,11 @@ h2 {
       height: 66vh; }
     .issue-block__editorial {
       padding: 4vw 4vw;
-      column-count: 1; }
+      column-count: auto; }
+    .issue-block__names {
+      padding: 4vw; }
+      .issue-block__names p {
+        font-size: 1.6rem; }
   .third-image {
     background-image: url(../assets/third-issue-2x-tablet.jpg); }
   .second-image {
@@ -272,6 +283,9 @@ h2 {
     .btn-block__left:hover {
       background-color: #000;
       color: #fff; }
+    .btn-block__left:active {
+      background-color: inherit;
+      color: #000; }
     .btn-block__left::before {
       content: '\261E';
       padding-right: 1rem; }
@@ -290,6 +304,9 @@ h2 {
     .btn-block__right:hover {
       background-color: #000;
       color: #fff; }
+    .btn-block__right:active {
+      background-color: inherit;
+      color: #000; }
     .btn-block__right::before {
       content: '\261E';
       padding-right: 1rem; }

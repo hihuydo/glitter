@@ -14,70 +14,106 @@ infoButton.addEventListener('click', function () {
 
 
 const editorialThirdButton = document.querySelector('a.editorial-third-btn')
-const overlayThird = document.querySelector('.overlay__third')
+const editorialThird = document.querySelector('.overlay__third')
 
 editorialThirdButton.addEventListener('click', function(event) {
-    if (overlayThird.classList.contains('open')) {
-        overlayThird.classList.remove('open')
+    if (editorialThird.classList.contains('open')) {
+        editorialThird.classList.remove('open')
+        nameThird.classList.remove('open')
         editorialThirdButton.textContent = 'Editorial'
     } else {
-        overlayThird.classList.add('open')
-        editorialThirdButton.textContent = 'Schließen'
+        editorialThird.classList.add('open')
+        nameThird.classList.remove('open')
+        // editorialThirdButton.textContent = 'Schließen'
     }
 
     event.preventDefault();  
 })
 
 const nameThirdButton = document.querySelector('a.name-third-btn')
+const nameThird = document.querySelector('.names-third')
 
 nameThirdButton.addEventListener('click', function(event) {
-    if (overlayThird.classList.contains('open')) {
-        overlayThird.classList.remove('open')
-        nameThirdButton.textContent = 'Mit Texten von'
+    if (nameThird.classList.contains('open')) {
+        nameThird.classList.remove('open')
+        editorialThird.classList.remove('open')
+        // nameThirdButton.textContent = 'Mit Texten von'
     } else {
-        overlayThird.classList.add('open')
-        nameThirdButton.textContent = 'Schließen'
+        nameThird.classList.add('open')
+        editorialThird.classList.remove('open')
+        // nameThirdButton.textContent = 'Schließen'
     }
 
     event.preventDefault();  
 })
 
 
-
-
-
-
-
-
-
-
-const editorialSecondButton = document.querySelector('a.second-btn')
-const secondOverlay = document.querySelector('.overlay__second')
+const editorialSecondButton = document.querySelector('a.editorial-second-btn')
+const editorialSecond = document.querySelector('.overlay__second')
 
 editorialSecondButton.addEventListener('click', function(event) {
-    if (secondOverlay.classList.contains('open')) {
-        secondOverlay.classList.remove('open')
-        editorialSecondButton.textContent = 'Editorial'
+    if (editorialSecond.classList.contains('open')) {
+        editorialSecond.classList.remove('open')
+        nameSecond.classList.remove('open')
+        // editorialSecond.textContent = 'Editorial'
     } else {
-        secondOverlay.classList.add('open')
-        editorialSecondButton.textContent = 'Schließen'
+        editorialSecond.classList.add('open')
+        nameSecond.classList.remove('open')
+        // editorialThirdButton.textContent = 'Schließen'
     }
 
-    event.preventDefault();
+    event.preventDefault();  
 })
 
-const editorialFirstButton = document.querySelector('a.first-btn')
-const firstOverlay = document.querySelector('.overlay__first')
+const nameSecondButton = document.querySelector('a.name-second-btn')
+const nameSecond = document.querySelector('.names-second')
 
-editorialFirstButton.addEventListener('click', function(event) {
-    if (firstOverlay.classList.contains('open')) {
-        firstOverlay.classList.remove('open')
-        editorialFirstButton.textContent = 'Editorial'
+nameSecondButton.addEventListener('click', function(event) {
+    if (nameSecond.classList.contains('open')) {
+        nameSecond.classList.remove('open')
+        editorialSecond.classList.remove('open')
+        // nameSecondButton.textContent = 'Mit Texten von'
     } else {
-        firstOverlay.classList.add('open')
-        editorialFirstButton.textContent = 'Schließen'
+        nameSecond.classList.add('open')
+        editorialSecond.classList.remove('open')
+        // nameThirdButton.textContent = 'Schließen'
     }
 
-    event.preventDefault();
+    event.preventDefault();  
+})
+
+
+const editorialFirstButton = document.querySelector('a.editorial-first-btn')
+const editorialFirst = document.querySelector('.overlay__first')
+
+editorialFirstButton.addEventListener('click', function(event) {
+    if (editorialFirst.classList.contains('open')) {
+        editorialFirst.classList.remove('open')
+        nameFirst.classList.remove('open')
+        // editorialSecond.textContent = 'Editorial'
+    } else {
+        editorialFirst.classList.add('open')
+        nameFirst.classList.remove('open')
+        // editorialThirdButton.textContent = 'Schließen'
+    }
+
+    event.preventDefault();  
+})
+
+const nameFirstButton = document.querySelector('a.name-first-btn')
+const nameFirst = document.querySelector('.names-first')
+
+nameFirstButton.addEventListener('click', function(event) {
+    if (nameFirst.classList.contains('open')) {
+        nameFirst.classList.remove('open')
+        editorialFirst.classList.remove('open')
+        // nameSecondButton.textContent = 'Mit Texten von'
+    } else {
+        nameFirst.classList.add('open')
+        editorialFirst.classList.remove('open')
+        // nameThirdButton.textContent = 'Schließen'
+    }
+
+    event.preventDefault();  
 })
 
