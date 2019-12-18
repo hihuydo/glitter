@@ -20,15 +20,9 @@
         
         column-count: 2;
         column-gap: 5rem;
-        -webkit-column-rule-width: 1px;
-        -moz-column-rule-width: 1px;
-        column-rule-width: 1px;
-        -webkit-column-rule-style: solid;
-        -moz-column-rule-style: solid;
-        column-rule-style: solid;
-        -webkit-column-rule-color: black;
-        -moz-column-rule-color: black;
-        column-rule-color: black;  
+        -webkit-column-rule: 1px solid black;
+        -moz-column-rule: 1px solid black;
+        column-rule: 1px solid black;
 
         p {
             margin-bottom: 2rem;
