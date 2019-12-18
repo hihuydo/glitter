@@ -25,6 +25,32 @@ body {
     font-family: $font-serif;
     font-size: 1.6rem;
     padding-top: 8vh;
+    overflow-x: hidden;
+
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba($color-primary, .3); 
+    background-color: $color-black;
+    // -webkit-border-radius: 10px;
+    // border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    // -webkit-border-radius: 10px;
+    // border-radius: 10px;
+    background: $color-white; 
+    -webkit-box-shadow: inset 0 0 6px rgba($color-primary, .2); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba($color-white, .4); 
 }
 
 /* iPhone 5 – Portrait and Landscape */
