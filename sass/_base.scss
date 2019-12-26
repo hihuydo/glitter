@@ -4,7 +4,6 @@
     margin: 0; 
     padding: 0;
     box-sizing: inherit;
-
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -14,24 +13,21 @@ html {
     font-size: 62.5%; /* would be 16pixel by default if the user doesn't change anything */
 
     scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
     scroll-padding: 8vh;
-
-    scroll-snap-type: mandatory;
-    // scroll-snap-points-y: repeat(300px);
+    
 }
 
 body {
     box-sizing: border-box;
     font-family: $font-serif;
     font-size: 1.6rem;
-    padding-top: 8vh;
-    overflow-x: hidden;
-
+    padding-top: 8vh; 
 }
 
-/* Let's get this party started */
+/* Let's get this party started */ 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 15px;
 }
  
 /* Track */

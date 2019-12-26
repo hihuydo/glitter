@@ -12,19 +12,18 @@ html {
   font-size: 62.5%;
   /* would be 16pixel by default if the user doesn't change anything */
   scroll-snap-type: y mandatory;
-  scroll-padding: 8vh;
-  scroll-snap-type: mandatory; }
+  -webkit-overflow-scrolling: touch;
+  scroll-padding: 8vh; }
 
 body {
   box-sizing: border-box;
   font-family: "Glitter Serif";
   font-size: 1.6rem;
-  padding-top: 8vh;
-  overflow-x: hidden; }
+  padding-top: 8vh; }
 
 /* Let's get this party started */
 ::-webkit-scrollbar {
-  width: 12px; }
+  width: 15px; }
 
 /* Track */
 ::-webkit-scrollbar-track {
@@ -205,7 +204,8 @@ h2 {
 .issue-block {
   height: 92vh;
   position: relative;
-  scroll-snap-align: start; }
+  scroll-snap-align: start;
+  overflow: visible; }
   .issue-block__image {
     height: 77vh;
     background-size: cover;
